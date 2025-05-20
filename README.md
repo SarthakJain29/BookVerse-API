@@ -169,7 +169,7 @@ npm start
 ## Database Schema
 
 ### User Schema
-```json
+```js
 {
   name: String,
   email: { type: String, unique: true },
@@ -178,7 +178,7 @@ npm start
 ```
 
 ### Book Schema
-```json
+```js
 {
   title: String,
   author: String,
@@ -189,7 +189,7 @@ npm start
 ```
 
 ### Review Schema
-```json
+```js
 {
   rating: Number (1–5),
   comment: String,
