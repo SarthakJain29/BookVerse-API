@@ -74,7 +74,7 @@ exports.getBookById = async (req, res) => {
 // 🔍 Search books by title or author
 exports.searchBooks = async (req, res) => {
   try {
-    const query = req.query.q;
+    const query = req.query.q?.trim(); // 🔧 Trim whitespace and newlines
     if (!query) {
       return res.status(400).json({ message: 'Query param "q" is required' });
     }

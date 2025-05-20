@@ -23,7 +23,7 @@ exports.signup = async (req, res) => {
     await user.save();
 
     const token = createToken(user._id);
-    res.status(201).json({ token, userId: user._id });
+    res.status(201).json({ message: 'User Registered Successfully', userId: user._id, token });
   } catch (err) {
     console.error('Signup Error:', err.message);
     res.status(500).json({ message: 'Server error' });
@@ -44,7 +44,7 @@ exports.login = async (req, res) => {
     if (!isMatch) return res.status(400).json({ message: 'Invalid email or password' });
 
     const token = createToken(user._id);
-    res.json({ token, userId: user._id });
+    res.json({ message: 'User Logged In', userId: user._id ,token});
   } catch (err) {
     console.error('Login Error:', err.message);
     res.status(500).json({ message: 'Server error' });
