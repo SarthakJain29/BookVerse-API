@@ -55,6 +55,7 @@ npm run dev
 # Or normal start
 npm start
 ```
+---
 
 ### Sample User Credentials
 ```json
@@ -63,6 +64,7 @@ npm start
   "password": "test1234"
 }
 ```
+--- 
 
 ## API Usage (Via Postman)
 
@@ -98,8 +100,8 @@ npm start
 #### 1. Add Book (auth required)
 #### POST/books
 
-##### Headers : Authorization: Bearer <token>
-##### Paste the token received after signing up/logging in
+#### Headers : Authorization: Bearer <token>
+#### Paste the token received after signing up/logging in
 ```json
 {
   "title": "The Alchemist",
@@ -110,21 +112,23 @@ npm start
 ```
 #### 2. Get all books
 #### GET/books
-##### Optional Query Params: ?author=JK&genre=Fantasy&page=1&limit=10
+#### Optional Query Params: ?author=JK&genre=Fantasy&page=1&limit=10
+
 
 #### 3. Search Books
 #### GET /books/search?q=alchemist
+
 
 #### 4. Get Book by ID
 #### GET /books/:id
 #### Put the id received after adding a book
 
+
 ### Review Routes
 
 #### 1. Add Review to Book
 #### POST /:bookId/reviews
-
-##### Headers : Authorization: Bearer <token>
+#### Headers : Authorization: Bearer <token>
 ```json
 {
   "rating": 4,
@@ -133,7 +137,7 @@ npm start
 ```
 #### 2. Update Review
 #### PUT /reviews/:reviewId
-##### Headers : Authorization: Bearer <token>
+#### Headers : Authorization: Bearer <token>
 ```json
 {
   "rating": 5,
@@ -143,20 +147,24 @@ npm start
 
 #### 3. Delete Review
 #### DELETE /reviews/:reviewId
-##### Headers : Authorization: Bearer <token>
+#### Headers : Authorization: Bearer <token>
+
+---
 
 ## Design Decisions & Assumptions
-MongoDB ObjectIds are used as unique identifiers for users, books, and reviews.
+- MongoDB ObjectIds are used as unique identifiers for users, books, and reviews.
 
-JWT is stored in the Authorization header using the Bearer <token> format.
+- JWT is stored in the Authorization header using the Bearer <token> format.
 
-Only authenticated users can add/update/delete books or reviews.
+- Only authenticated users can add/update/delete books or reviews.
 
-Reviews are tied to both the user and the book.
+- Reviews are tied to both the user and the book.
 
-The codebase has been well-structured with seperate files for each functionality.
+- The codebase has been well-structured with seperate files for each functionality.
 
-Routes logic written seperately in controller directory to enhance code-readability.
+- Routes logic written seperately in controller directory to enhance code-readability.
+ 
+---
 
 ## Database Schema
 
@@ -189,6 +197,7 @@ Routes logic written seperately in controller directory to enhance code-readabil
   user: ObjectId (User)
 }
 ```
+---
 
 ## Folder Structure
 ```pgsql
@@ -210,6 +219,7 @@ Routes logic written seperately in controller directory to enhance code-readabil
 ├── app.js
 └── README.md
 ```
+---
 
 THANK YOU
 Made by Sarthak Jain
