@@ -221,7 +221,7 @@ npm start
 ```
 ---
 
-THANK YOU
-Made by Sarthak Jain
-Contact me in-case of any queries or suggestions.
+THANK YOU<br>
+Made by Sarthak Jain<br>
+Contact me in-case of any queries or suggestions.<br>
 Email - sarthakjain3241@gmail.com
